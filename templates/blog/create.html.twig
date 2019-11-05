@@ -5,12 +5,24 @@
 {% endblock %}
 {% form_theme formArticle 'bootstrap_4_layout.html.twig' %}
 {% block body %}
-<h2>creation article</h2>
+    {% if editMode %}
+        <h2>modifier article</h2>
+    {% else %}
+        <h2>creation article</h2>
+    {% endif %}
+
     {{ form_start(formArticle) }}
     {{ form_row(formArticle.title, {'attr': {'placeholder': "titre de l'article"}}) }}
     {{ form_row(formArticle.content, {'attr': {'placeholder': "contenu"}}) }}
     {{ form_row(formArticle.image, {'attr': {'placeholder': "url de l'image"}}) }}
-    <button type="submit" class="btn btn-success">Ajouter article</button>
+    <button type="submit" class="btn btn-success">
+        {% if editMode %}
+            modifier
+        {% else %}
+            Ajouter article
+        {% endif %}
+
+    </button>
     {{ form_end(formArticle) }}
 {% endblock %}
 
