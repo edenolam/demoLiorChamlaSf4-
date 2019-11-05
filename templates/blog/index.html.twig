@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}-Hello BlogController!{% endblock %}
+
+{% block body %}
+    <section class="articles row">
+        {% for article in articles %}
+           <div class="col m-3">
+               <article class="card" style="width: 18rem;">
+                   <img src="{{ article.image }}" class="card-img-top" alt="">
+                   <div class="content card-body">
+                       <h5 class="card-title">{{ article.title }}</h5>
+                       <div class="metadata">
+                           Ecrit le {{ article.createdAt | date('d/m/Y')}} a {{ article.createdAt | date('H:i') }} dans la categorie polityque.
+                       </div>
+                       <p class="card-text">{{ article.content }}</p>
+                       <a href="{{ path('blog_show', {'id': article.id}) }}" class="btn btn-primary">lire la suite</a>
+                   </div>
+               </article>
+           </div>
+        {% endfor %}
+    </section>
+{% endblock %}
