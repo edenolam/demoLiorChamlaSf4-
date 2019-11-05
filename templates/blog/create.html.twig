@@ -12,6 +12,7 @@
     {% endif %}
 
     {{ form_start(formArticle) }}
+
     {{ form_row(formArticle.title, {'attr': {'placeholder': "titre de l'article"}}) }}
     {{ form_row(formArticle.content, {'attr': {'placeholder': "contenu"}}) }}
     {{ form_row(formArticle.image, {'attr': {'placeholder': "url de l'image"}}) }}
