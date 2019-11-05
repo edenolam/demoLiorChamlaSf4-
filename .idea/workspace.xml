@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52ca6d44-6d30-4686-8a97-4dcd47aab941" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/7e26530a-dc68-4630-8ed9-67beec12c2e7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Form/ArticleType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20191105224052.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Article.php" afterPath="$PROJECT_DIR$/src/Entity/Article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/log/dev.log" afterPath="$PROJECT_DIR$/var/log/dev.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -400,7 +404,7 @@
       <updated>1572987773681</updated>
       <workItem from="1572987775036" duration="10000" />
       <workItem from="1572988020161" duration="2542000" />
-      <workItem from="1572990595567" duration="3731000" />
+      <workItem from="1572990595567" duration="3893000" />
     </task>
     <task id="LOCAL-00001" summary="initjskfcdsq">
       <created>1572989120933</created>
@@ -423,11 +427,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572992903184</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajout category">
+      <created>1572994338671</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572994338671</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6283000" />
+    <option name="totallyTimeSpent" value="6445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1600" height="902" extended-state="6" />
@@ -462,7 +473,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initjskfcdsq" />
     <MESSAGE value="creation de form" />
-    <option name="LAST_COMMIT_MESSAGE" value="creation de form" />
+    <MESSAGE value="ajout category" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout category" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
