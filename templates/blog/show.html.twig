@@ -15,13 +15,9 @@
                 <a class="nav-link" href="{{ path('blog_edit', {'id': article.id}) }}">Modifier un article</a>
             </div>
         </article>
-{#    {{ form_start(formComment) }}#}
-{#    {{ form_widget(formComment) }}#}
-{#    <button type="submit" class="btn btn-success">#}
-{#ajouter#}
-{#    </button>#}
-{#    {{ form_end(formComment) }}#}
+
     <section class="comentaires">
+        <h3>Commentaires ({{ article.comments | length }})</h3>
         <ul class="list-group list-group-flush">
         {% for comment in article.comments %}
             <li class="list-group-item">
@@ -38,6 +34,12 @@
             </li>
         {% endfor %}
         </ul>
+        {{ form_start(formComment) }}
+        {{ form_widget(formComment) }}
+        <button type="submit" class="btn btn-success">
+            Ajouter
+        </button>
+        {{ form_end(formComment) }}
     </section>
 
 

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="blogLiorChamlaSf@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.16">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
     <root id="1"/>
     <schema id="2" parent="1" name="blogLiorChamlaSf">
       <Current>1</Current>
+      <Visible>1</Visible>
     </schema>
     <schema id="3" parent="1" name="bad_puns_counter"/>
     <schema id="4" parent="1" name="crudphp"/>
@@ -21,118 +22,159 @@
     <table id="16" parent="2" name="article"/>
     <table id="17" parent="2" name="auteur"/>
     <table id="18" parent="2" name="category"/>
-    <table id="19" parent="2" name="migration_versions"/>
-    <column id="20" parent="16" name="id">
+    <table id="19" parent="2" name="comment"/>
+    <table id="20" parent="2" name="migration_versions"/>
+    <column id="21" parent="16" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="21" parent="16" name="title">
+    <column id="22" parent="16" name="title">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="16" name="content">
+    <column id="23" parent="16" name="content">
       <Position>3</Position>
-      <DataType>longtext|0s</DataType>
+      <DataType>longtext|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="16" name="image">
+    <column id="24" parent="16" name="image">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="16" name="created_at">
+    <column id="25" parent="16" name="created_at">
       <Position>5</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="16" name="category_id">
+    <column id="26" parent="16" name="category_id">
       <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="26" parent="16" name="IDX_23A0E6612469DE2">
+    <index id="27" parent="16" name="IDX_23A0E6612469DE2">
       <ColNames>category_id</ColNames>
     </index>
-    <key id="27" parent="16" name="PRIMARY">
+    <key id="28" parent="16" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="28" parent="16" name="FK_23A0E6612469DE2">
+    <foreign-key id="29" parent="16" name="FK_23A0E6612469DE2">
       <ColNames>category_id</ColNames>
       <RefSchemaName>blogLiorChamlaSf</RefSchemaName>
       <RefTableName>category</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="29" parent="17" name="id">
+    <column id="30" parent="17" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="30" parent="17" name="email">
+    <column id="31" parent="17" name="email">
       <Position>2</Position>
-      <DataType>varchar(180)|0s</DataType>
+      <DataType>varchar(180)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="17" name="roles">
+    <column id="32" parent="17" name="roles">
       <Position>3</Position>
-      <DataType>json|0s</DataType>
+      <DataType>json|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="17" name="password">
+    <column id="33" parent="17" name="password">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="33" parent="17" name="UNIQ_55AB140E7927C74">
+    <index id="34" parent="17" name="UNIQ_55AB140E7927C74">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="34" parent="17" name="PRIMARY">
+    <key id="35" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="35" parent="17" name="UNIQ_55AB140E7927C74">
+    <key id="36" parent="17" name="UNIQ_55AB140E7927C74">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>UNIQ_55AB140E7927C74</UnderlyingIndexName>
     </key>
-    <column id="36" parent="18" name="id">
+    <column id="37" parent="18" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="37" parent="18" name="title">
+    <column id="38" parent="18" name="title">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="38" parent="18" name="description">
+    <column id="39" parent="18" name="description">
       <Position>3</Position>
-      <DataType>longtext|0s</DataType>
+      <DataType>longtext|0</DataType>
     </column>
-    <key id="39" parent="18" name="PRIMARY">
+    <key id="40" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="40" parent="19" name="version">
+    <column id="41" parent="19" name="id">
       <Position>1</Position>
-      <DataType>varchar(14)|0s</DataType>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="19" name="article_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="41" parent="19" name="executed_at">
+    <column id="43" parent="19" name="author">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="19" name="content">
+      <Position>4</Position>
+      <DataType>longtext|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="19" name="created_at">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="46" parent="19" name="IDX_9474526C7294869C">
+      <ColNames>article_id</ColNames>
+    </index>
+    <key id="47" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="48" parent="19" name="FK_9474526C7294869C">
+      <ColNames>article_id</ColNames>
+      <RefSchemaName>blogLiorChamlaSf</RefSchemaName>
+      <RefTableName>article</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="49" parent="20" name="version">
+      <Position>1</Position>
+      <DataType>varchar(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="20" name="executed_at">
       <Position>2</Position>
       <Comment>(DC2Type:datetime_immutable)</Comment>
-      <DataType>datetime|0s</DataType>
+      <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="42" parent="19" name="PRIMARY">
+    <key id="51" parent="20" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
       <Primary>1</Primary>

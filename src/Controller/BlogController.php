@@ -52,12 +52,12 @@ class BlogController extends AbstractController
      */
     public function form(Article $article = null, Request $request, ObjectManager $manager)
     {
-        if(!$article){
+        if (!$article) {
             $article = new Article();
         }
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
             if (!$article->getId()) {
                 $article->setCreatedAt(new \DateTime());
             }
@@ -82,32 +82,24 @@ class BlogController extends AbstractController
      * @throws Exception
      * @internal param $id
      */
-    public function show(Article $article = null, Request $request, ObjectManager $manager) // <--- ca c'est le param converter, il sait quel est l'article par rapport a l'id passé dans la route
+    public function show(Article $article, Request $request, ObjectManager $manager)
+        // Article $article<--- ca c'est le param converter, il sait quel est l'article par rapport a l'id passé dans la route
     {
         $comment = new Comment();
-
-        dump($comment);
         $form = $this->createForm(CommentType::class, $comment);
-        dump($form);
-
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
             if ($article->getId() !== null) {
                 $comment->setCreatedAt(new \DateTime());
+                $comment->setArticle($article);
             }
-//            $test = $comment->getArticle($article->getId());
-//            dump($test);
             $manager->persist($comment);
             $manager->flush();
             return $this->redirectToRoute('blog_show', ['id' => $article->getId()]);
         }
-
         return $this->render('blog/show.html.twig', [
             'article' => $article,
+            'formComment' => $form->createView()
         ]);
     }
-
-
-
-
 }
