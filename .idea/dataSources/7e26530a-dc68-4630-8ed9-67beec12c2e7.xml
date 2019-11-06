@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="blogLiorChamlaSf@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.16">
     <root id="1"/>
     <schema id="2" parent="1" name="blogLiorChamlaSf">
       <Current>1</Current>
-      <Visible>1</Visible>
     </schema>
     <schema id="3" parent="1" name="bad_puns_counter"/>
     <schema id="4" parent="1" name="crudphp"/>
@@ -25,33 +24,33 @@
     <table id="19" parent="2" name="migration_versions"/>
     <column id="20" parent="16" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="21" parent="16" name="title">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="22" parent="16" name="content">
       <Position>3</Position>
-      <DataType>longtext|0</DataType>
+      <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="23" parent="16" name="image">
       <Position>4</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="24" parent="16" name="created_at">
       <Position>5</Position>
-      <DataType>datetime|0</DataType>
+      <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="25" parent="16" name="category_id">
       <Position>6</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="26" parent="16" name="IDX_23A0E6612469DE2">
@@ -70,23 +69,23 @@
     </foreign-key>
     <column id="29" parent="17" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="30" parent="17" name="email">
       <Position>2</Position>
-      <DataType>varchar(180)|0</DataType>
+      <DataType>varchar(180)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="31" parent="17" name="roles">
       <Position>3</Position>
-      <DataType>json|0</DataType>
+      <DataType>json|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="32" parent="17" name="password">
       <Position>4</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="33" parent="17" name="UNIQ_55AB140E7927C74">
@@ -104,18 +103,18 @@
     </key>
     <column id="36" parent="18" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="37" parent="18" name="title">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="38" parent="18" name="description">
       <Position>3</Position>
-      <DataType>longtext|0</DataType>
+      <DataType>longtext|0s</DataType>
     </column>
     <key id="39" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -124,13 +123,13 @@
     </key>
     <column id="40" parent="19" name="version">
       <Position>1</Position>
-      <DataType>varchar(14)|0</DataType>
+      <DataType>varchar(14)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="41" parent="19" name="executed_at">
       <Position>2</Position>
       <Comment>(DC2Type:datetime_immutable)</Comment>
-      <DataType>datetime|0</DataType>
+      <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="42" parent="19" name="PRIMARY">

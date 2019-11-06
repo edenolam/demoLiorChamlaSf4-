@@ -3,20 +3,43 @@
 {% block title %}{{ parent() }}-Hello BlogController!{% endblock %}
 
 {% block body %}
-    <section class="articles row">
-            <div class="col m-3">
-                <article class="card">
-                    <img src="{{ article.image }}" class="card-img-top" alt="">
-                    <div class="content card-body">
-                        <h5 class="card-title">{{ article.title }}</h5>
-                        <div class="metadata">
-                            Ecrit le {{ article.createdAt | date('d/m/Y')}} a {{ article.createdAt | date('H:i') }} dans la categorie polityque.
-                        </div>
-                        <p class="card-text">{{ article.content }}</p>
-                        <a href="{{ path('blog') }}" class="btn btn-primary">retour aux articles</a>
-                            <a class="nav-link" href="{{ path('blog_edit', {'id': article.id}) }}">modifier un article</a>
-                    </div>
-                </article>
+        <article class="card">
+            <img src="{{ article.image }}" class="card-img-top" alt="">
+            <div class="content card-body">
+                <h5 class="card-title">{{ article.title }}</h5>
+                <div class="metadata">
+                    Ecrit le {{ article.createdAt | date('d/m/Y')}} a {{ article.createdAt | date('H:i') }} dans la categorie {{ article.category.title }}.
+                </div>
+                <p class="card-text"></p>
+                <a href="{{ path('blog') }}" class="btn btn-primary">Retour aux articles</a>
+                <a class="nav-link" href="{{ path('blog_edit', {'id': article.id}) }}">Modifier un article</a>
             </div>
+        </article>
+{#    {{ form_start(formComment) }}#}
+{#    {{ form_widget(formComment) }}#}
+{#    <button type="submit" class="btn btn-success">#}
+{#ajouter#}
+{#    </button>#}
+{#    {{ form_end(formComment) }}#}
+    <section class="comentaires">
+        <ul class="list-group list-group-flush">
+        {% for comment in article.comments %}
+            <li class="list-group-item">
+            <div class="comment">
+                <div class="row">
+                    <div class="col-3 text-primary">
+                        <p class="font-weight-bolder">{{ comment.author }}</p>  (<small>{{ comment.createdAt | date('d/m/Y a H:i') }}</small>)
+                    </div>
+                    <div class="col-9">
+                        <p class="text-secondary">{{ comment.content | raw }}</p>
+                    </div>
+                </div>
+            </div>
+            </li>
+        {% endfor %}
+        </ul>
     </section>
+
+
+
 {% endblock %}
