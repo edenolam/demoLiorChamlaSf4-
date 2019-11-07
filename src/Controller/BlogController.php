@@ -42,8 +42,8 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/blog/new", name="blog_create")
-     * @Route("/blog/{id}/edit", name="blog_edit")
+     * @Route("admin/blog/new", name="blog_create")
+     * @Route("admin/blog/{id}/edit", name="blog_edit")
      * @param Article|null $article
      * @param Request $request
      * @param ObjectManager $manager
