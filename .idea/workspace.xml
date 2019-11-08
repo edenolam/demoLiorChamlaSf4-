@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52ca6d44-6d30-4686-8a97-4dcd47aab941" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191107103320.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/registration.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7e26530a-dc68-4630-8ed9-67beec12c2e7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/demoLiorChamlaSf4-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/demoLiorChamlaSf4-.iml" afterDir="false" />
+    <list default="true" id="52ca6d44-6d30-4686-8a97-4dcd47aab941" name="Default" comment="finalisation security">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Auteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Auteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blog/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/home.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blog/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
@@ -250,7 +237,8 @@
       <workItem from="1573069349211" duration="2293000" />
       <workItem from="1573122350978" duration="5048000" />
       <workItem from="1573131668224" duration="2903000" />
-      <workItem from="1573136345844" duration="15680000" />
+      <workItem from="1573136345844" duration="15989000" />
+      <workItem from="1573201746780" duration="2599000" />
     </task>
     <task id="LOCAL-00001" summary="initjskfcdsq">
       <created>1572989120933</created>
@@ -294,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573070890677</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="finalisation security">
+      <created>1573152572135</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573152572135</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +314,8 @@
     <MESSAGE value="creation de form" />
     <MESSAGE value="ajout category" />
     <MESSAGE value="commentaires fonctionnel" />
-    <option name="LAST_COMMIT_MESSAGE" value="commentaires fonctionnel" />
+    <MESSAGE value="finalisation security" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalisation security" />
   </component>
   <component name="masterDetails">
     <states>

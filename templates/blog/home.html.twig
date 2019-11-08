@@ -2,7 +2,7 @@
 
 {% block body %}
 <h1>
-    bienvenue  {{ app.user.username }}
+    bienvenue  {{ app.user }}
 </h1>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ipsum magni neque quidem quisquam! Consequuntur, cum deleniti esse ipsa laborum nihil odio reprehenderit repudiandae tempore temporibus ut vel, veniam veritatis.
@@ -10,6 +10,6 @@
 {% endblock %}
 
 {% block title %}
-
+{{ parent() }} - home
 {% endblock %}
 
